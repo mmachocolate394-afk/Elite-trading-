@@ -240,7 +240,7 @@
         <section id="about">
             <h2>About Us</h2>
             <div class="about-content">
-                <p>Founded with a vision to empower traders globally, Elite Trading delivers cutting-edge market analysis, robust security infrastructure, and intuitive trading environments. Whether you are taking your first steps into the financial markets or you are an experienced institutional investor, our platform provides the tools, transparency, and liquidity you need to succeed.</p>
+                <p>Founded with a vision to empower traders globally, Elite Trading delivers cutting-edge market analysis, robust security infrastructure, and intuitive trading environments. Whether y[...]
             </div>
         </section>
 
@@ -341,22 +341,27 @@
         <p>&copy; 2026 Elite Trading. All rights reserved.</p>
     </footer>
 
-    <!-- Smartsupp Live Chat Script -->
+    <!-- Tawk.to Live Chat Script -->
     <script type="text/javascript">
-    var _smartsupp = _smartsupp || {};
-    _smartsupp.key = '09c4a6921e6000fdcddce6b65c30bb7ee308c87d';
-    window.smartsupp||(function(d) {
-      var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-      s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-      c.type='text/javascript';c.charset='utf-8';c.async=true;
-      c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
-    })(document);
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
 
-    // Automatically open the chat window on load
-    smartsupp('chat:open');
+        // Auto-open the chat widget on page load
+        Tawk_API.onLoad = function() {
+            Tawk_API.showWidget();
+        };
+
+        (function() {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/6a8f7310dcccab344b66e78f/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
     </script>
-    <noscript>Powered by <a href="https://www.smartsupp.com" target="_blank">Smartsupp</a></noscript>
-    <!-- End of Smartsupp Script -->
+    <!-- End of Tawk.to Script -->
 
 </body>
 </html>
