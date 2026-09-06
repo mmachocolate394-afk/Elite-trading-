@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Trading - Welcome</title>
+    <style>
+        :root {
+            --primary: #10b981; /* Vibrant Emerald Green */
+            --primary-hover: #059669;
+            --bg-color: #f0fdf4; /* Very Light Mint Background */
+            --card-bg: #ffffff;
+            --text-main: #0f172a; /* Dark / Black */
+            --text-muted: #475569;
+            --border-color: #cbd5e1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        header {
+            background-color: var(--text-main);
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--text-main) 0%, #1e293b 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+            border-bottom: 3px solid var(--primary);
+            display: inline-block;
+            padding-bottom: 0.3rem;
+        }
+
+        /* About Us */
+        .about-content {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Forms Layout */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--primary);
+        }
+
+        /* Support Section */
+        .support-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .support-card {
+            background: var(--bg-color);
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-main);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 4rem;
+        }
+
+        @media(max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">Elite Trading</div>
+            <nav>
+                <ul>
+                    <li><a href="#welcome">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#register">Register</a></li>
+                    <li><a href="#login">Login</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Welcome Hero Section -->
+    <section id="welcome" class="hero" style="margin-bottom: 0; border-radius: 0;">
+        <h1>Welcome to <span>Elite Trading</span></h1>
+        <p>Your premier gateway to advanced financial markets, secure asset management, and professional trading solutions.</p>
+        <a href="#register" class="btn">Get Started Now</a>
+    </section>
+
+    <div class="container">
+
+        <!-- About Us Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <p>Founded with a vision to empower traders globally, Elite Trading delivers cutting-edge market analysis, robust security infrastructure, and intuitive trading environments. Whether you are taking your first steps into the financial markets or you are an experienced institutional investor, our platform provides the tools, transparency, and liquidity you need to succeed.</p>
+            </div>
+        </section>
+
+        <!-- Full Registration Section -->
+        <section id="register">
+            <h2>Create Account (Registration)</h2>
+            <form action="#" method="POST">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="reg-fname">First Name</label>
+                        <input type="text" id="reg-fname" name="first_name" placeholder="Enter your first name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-lname">Last Name</label>
+                        <input type="text" id="reg-lname" name="last_name" placeholder="Enter your last name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">Email Address</label>
+                        <input type="email" id="reg-email" name="email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-phone">Phone Number</label>
+                        <input type="tel" id="reg-phone" name="phone" placeholder="+1 (555) 000-0000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-country">Country of Residence</label>
+                        <select id="reg-country" name="country" required>
+                            <option value="">Select your country</option>
+                            <option value="US">United States</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="CA">Canada</option>
+                            <option value="AU">Australia</option>
+                            <option value="NG">Nigeria</option>
+                            <option value="OTHER">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-account-type">Account Type</label>
+                        <select id="reg-account-type" name="account_type" required>
+                            <option value="standard">Standard Account</option>
+                            <option value="pro">Professional Account</option>
+                            <option value="vip">VIP Account</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Password</label>
+                        <input type="password" id="reg-password" name="password" placeholder="Create a secure password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-cpassword">Confirm Password</label>
+                        <input type="password" id="reg-cpassword" name="confirm_password" placeholder="Confirm your password" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <button type="submit" class="btn" style="width: 100%;">Complete Registration</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- Login Section -->
+        <section id="login">
+            <h2>Sign In / Login</h2>
+            <form action="#" method="POST" style="max-width: 500px; margin: 0 auto;">
+                <div class="form-group">
+                    <label for="login-email">Email Address</label>
+                    <input type="email" id="login-email" name="email" placeholder="Enter your registered email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn" style="width: 100%;">Sign In</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Support Section -->
+        <section id="support">
+            <h2>Support Center</h2>
+            <p class="about-content">Need assistance with your account, deposits, or trading tools? Our dedicated support team is available 24/7 to help you.</p>
+            <div class="support-info">
+                <div class="support-card">
+                    <h3>Live Chat</h3>
+                    <p>Use the live chat widget at the bottom right corner of the screen to chat instantly with our support team.</p>
+                </div>
+                <div class="support-card">
+                    <h3>Email Support</h3>
+                    <p>Send your queries to <strong>support@elitetrading.com</strong> and we will respond within 2 hours.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Elite Trading. All rights reserved.</p>
+    </footer>
+
+    <!-- Smartsupp Live Chat Script -->
+    <script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = '09c4a6921e6000fdcddce6b65c30bb7ee308c87d';
+    window.smartsupp||(function(d) {
+      var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+      s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+      c.type='text/javascript';c.charset='utf-8';c.async=true;
+      c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+    })(document);
+
+    // Automatically open the chat window on load
+    smartsupp('chat:open');
+    </script>
+    <noscript>Powered by <a href="https://www.smartsupp.com" target="_blank">Smartsupp</a></noscript>
+    <!-- End of Smartsupp Script -->
+
+</body>
+</html>
